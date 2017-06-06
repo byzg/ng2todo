@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  title = 'Todo list';
   items: string[] = [
     'To drink',
     'To eat',
