@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdToolbarModule, MdListModule } from '@angular/material';
+import { MdToolbarModule, MdListModule, MdCheckboxModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
@@ -20,7 +20,8 @@ import { TodoComponent } from './todo/todo.component';
     HttpModule,
     BrowserAnimationsModule,
     MdToolbarModule,
-    MdListModule
+    MdListModule,
+    MdCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
