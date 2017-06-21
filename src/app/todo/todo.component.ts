@@ -1,9 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
-interface Todo {
-  text: string;
-  completed: boolean;
-}
+import { ITodo } from '../app.component';
 
 @Component({
   selector: 'app-todo',
@@ -11,27 +8,13 @@ interface Todo {
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  items: Todo[] = [
-    {
-      text: 'To drink',
-      completed: false
-    },
-    {
-      text: 'To eat',
-      completed: true
-    },
-    {
-      text: 'To sleep',
-      completed: false
-    }
-  ];
-
+  @Input() items;
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggleItem(item: Todo) {
+  toggleItem(item: ITodo) {
     item.completed = !item.completed;
   }
 }
