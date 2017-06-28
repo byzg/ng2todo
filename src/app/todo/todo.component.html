@@ -1,8 +1,5 @@
 <md-list>
   <md-list-item *ngFor="let item of items" [class.completed]="item.completed">
-    <md-checkbox [checked]="item.completed" (change)="toggleItem(item)">{{item.text}}</md-checkbox>
-    <button md-icon-button>
-      <md-icon>delete</md-icon>
-    </button>
+    <app-todo-item [item]="item" (delete)="delete(item)"></app-todo-item>
   </md-list-item>
 </md-list>

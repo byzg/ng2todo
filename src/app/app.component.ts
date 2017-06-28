@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 
-export interface ITodo {
-  text: string;
-  completed: boolean;
-}
+import { ITodoItem } from "./todo/todo-item/todo-item.component";
 
 @Component({
   selector: 'app-root',
@@ -11,7 +8,7 @@ export interface ITodo {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  items: ITodo[] = [
+  items: ITodoItem[] = [
     {
       text: 'To drink',
       completed: false

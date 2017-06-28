@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ITodo } from '../app.component';
+import { ITodoItem } from "./todo-item/todo-item.component";
 
 @Component({
   selector: 'app-todo',
@@ -14,7 +14,7 @@ export class TodoComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleItem(item: ITodo) {
-    item.completed = !item.completed;
+  delete(item: ITodoItem) {
+    this.items.splice(this.items.indexOf(item), 1)
   }
 }
