@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Item } from '../models/item';
 
-const stubIndexData = [
+const fakeIndexData = [
   {
     text: 'To drink',
     completed: false
@@ -18,7 +18,7 @@ const stubIndexData = [
 ];
 
 @Injectable()
-export class Items<Item> extends Array<Item> {
+export class Items extends Array<Item> {
   constructor() {
     super();
     Object.setPrototypeOf(this, Items.prototype);
@@ -26,8 +26,12 @@ export class Items<Item> extends Array<Item> {
 
   index(): Promise<any> {
     return new Promise(resolve => {
-      stubIndexData.map(itemData => this.push(new Item(itemData)));
+      fakeIndexData.map(itemData => this.push(new Item(itemData)));
       resolve();
     });
+  }
+
+  delete(item: Item) {
+    this.splice(this.indexOf(item), 1);
   }
 }

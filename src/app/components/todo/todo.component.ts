@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { ITodoItem } from "../todo-item/todo-item.component";
+import { Items } from '../../resources/collections/items';
+import { Item } from '../../resources/models/item';
 
 @Component({
   selector: 'app-todo',
@@ -8,13 +9,9 @@ import { ITodoItem } from "../todo-item/todo-item.component";
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  @Input() items;
-  constructor() { }
+  constructor(public items: Items) { }
 
   ngOnInit() {
-  }
-
-  delete(item: ITodoItem) {
-    this.items.splice(this.items.indexOf(item), 1)
+    this.items.index();
   }
 }
