@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  MdToolbarModule, MdListModule, MdCheckboxModule, MdIconModule, MdButtonModule,
+  MatToolbarModule, MatListModule, MatCheckboxModule, MatIconModule, MatButtonModule,
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -23,11 +23,11 @@ import { TodoItemComponent } from './todo/todo-item/todo-item.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdToolbarModule,
-    MdListModule,
-    MdCheckboxModule,
-    MdButtonModule,
-    MdIconModule
+    MatToolbarModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
