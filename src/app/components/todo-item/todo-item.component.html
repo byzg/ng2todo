@@ -1,6 +1,6 @@
-<md-checkbox [checked]="item.completed" (change)="item.toggle()">
+<mat-checkbox [checked]="item.completed" (change)="item.toggle()">
   {{item.text}}
-</md-checkbox>
-<button md-icon-button (click)="onDelete()">
-  <md-icon>delete</md-icon>
+</mat-checkbox>
+<button mat-icon-button (click)="onDelete()">
+  <mat-icon>delete</mat-icon>
 </button>
