@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ITodoItem } from "./todo/todo-item/todo-item.component";
+import { ITodoItem } from "../todo-item/todo-item.component";
 
 @Component({
   selector: 'app-root',

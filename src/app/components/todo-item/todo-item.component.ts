@@ -1,9 +1,5 @@
 import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
-
-export interface ITodoItem {
-  text: string;
-  completed: boolean;
-}
+import { Item } from '../../resources/models/item';
 
 @Component({
   selector: 'app-todo-item',
@@ -11,18 +7,14 @@ export interface ITodoItem {
   styleUrls: ['todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-  @Input() item: ITodoItem;
+  @Input() item: Item;
   @Output() delete = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggle(): void {
-    this.item.completed = !this.item.completed
-  }
-
   onDelete() {
-    this.delete.emit(this.item)
+    this.delete.emit(this.item);
   }
 }

@@ -8,8 +8,9 @@ import {
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { TodoComponent } from './todo/todo.component';
-import { TodoItemComponent } from './todo/todo-item/todo-item.component';
+import { TodoComponent } from '../todo/todo.component';
+import { TodoItemComponent } from '../todo-item/todo-item.component';
+import { Items } from '../../resources/collections/items';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { TodoItemComponent } from './todo/todo-item/todo-item.component';
     MatButtonModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [Items],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
